@@ -4,13 +4,27 @@ export default class Square extends Component {
     constructor(){
         super()
 
-        this.state = {
-
+        this.state= {
+            backgroundColor: "white"
         }
+    this.changeBackgroundColor = this.changeBackgroundColor.bind(this)
+    }
+    changeBackgroundColor(){
+        this.setState({ 
+            //Ask Sam or matt why background color isn't set to this.backgroundcolor and why didn't i have to pass in props to super and constructor
+            backgroundColor: this.props.selectedColor
+        })
     }
     render(){
         return(
-            <div className="square"></div>
+            <div style={{
+                height: 15,
+                width: 15,
+                border: "1px solid black",
+                background: this.state.backgroundColor
+            }}
+            onClick={this.changeBackgroundColor} ></div>
         )
     }
+    //onMouseMove
 }
