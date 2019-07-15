@@ -18,12 +18,12 @@ export default class Square extends Component {
     render(){
         return(
             <div style={{
-                height: 15,
-                width: 15,
+                height: 20,
+                width: 20,
                 border: "1px solid black",
                 background: this.state.backgroundColor
             }}
-            onClick={this.changeBackgroundColor} ></div>
+            onMouseOverCapture={this.changeBackgroundColor} ></div>
         )
     }
     //onMouseMove
