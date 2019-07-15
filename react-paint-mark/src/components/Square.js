@@ -23,7 +23,7 @@ export default class Square extends Component {
                 border: "1px solid black",
                 background: this.state.backgroundColor
             }}
-            onMouseOverCapture={this.changeBackgroundColor} ></div>
+            onClick={this.changeBackgroundColor} ></div>
         )
     }
     //onMouseMove
